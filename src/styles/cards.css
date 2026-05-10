@@ -1,0 +1,253 @@
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 18px;
+
+  box-shadow:
+    0 4px 10px rgba(15, 23, 42, 0.03),
+    0 12px 24px rgba(15, 23, 42, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.05),
+    0 18px 36px rgba(15, 23, 42, 0.08);
+
+  border-color: #dbe4ff;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* =========================
+   SMALL LABELS
+========================= */
+
+.card-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.card-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn {
+  height: 54px;
+  border: none;
+  border-radius: 16px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.success-btn {
+  height: 54px;
+  border: none;
+  border-radius: 16px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.success-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.secondary-btn {
+  height: 54px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #f8fafc;
+  border-color: #dbe4ff;
+}
+
+.danger-btn {
+  height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.danger-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* =========================
+   ICON BUTTONS
+========================= */
+
+.icon-btn {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: #f8fafc;
+  border-color: #dbe4ff;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.command-input {
+  width: 100%;
+  min-height: 140px;
+
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+
+  padding: 18px;
+
+  resize: none;
+  outline: none;
+
+  font-size: 15px;
+  line-height: 1.6;
+  color: #111827;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.command-input:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+/* =========================
+   STATUS PILLS
+========================= */
+
+.status-pill {
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.status-online {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.status-offline {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status-info {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .command-input {
+    min-height: 120px;
+    padding: 16px;
+  }
+}

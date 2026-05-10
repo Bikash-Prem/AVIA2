@@ -1,0 +1,124 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dashboard-page {
+  height: 100vh;
+overflow-y: auto;
+overflow-x: hidden;
+  background: #f4f7fb;
+  padding: 20px;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   TOP STATS ROW
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.95fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* =========================
+   BOTTOM GRID
+========================= */
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 0.9fr)
+    minmax(260px, 0.9fr)
+    minmax(260px, 0.9fr)
+    minmax(420px, 1.4fr);
+
+  gap: 20px;
+  align-items: start;
+}
+
+/* =========================
+   GENERIC HELPERS
+========================= */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-gap {
+  gap: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1500px) {
+  .bottom-grid {
+    grid-template-columns:
+      repeat(2, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 14px;
+  }
+
+  .dashboard-content {
+    gap: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-grid {
+    gap: 16px;
+  }
+
+  .bottom-grid {
+    gap: 16px;
+  }
+}
